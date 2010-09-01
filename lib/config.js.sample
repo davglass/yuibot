@@ -1,0 +1,37 @@
+/*
+
+Change these settings and make this /lib/config.js
+
+*/
+exports.config = {
+    mysql: {
+        username: 'username',
+        password: 'password',
+        db: 'dbname'
+    },
+    irc: {
+        server: 'irc.freenode.net',
+        nick: 'botname',
+        channels: ['#yui'],
+        user: {
+            username: 'yuibot',
+            hostname: 'yuilibrary.com',
+            servername: 'yuilibrary.com',
+            realname: 'YBot'
+        }
+    }
+};
+
+/*
+CREATE TABLE IF NOT EXISTS chat (
+  id int(11) NOT NULL auto_increment,
+  channel varchar(255) NOT NULL,
+  stamp timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  utterance text,
+  who varchar(32) default NULL,
+  PRIMARY KEY  (id),
+  KEY chat_stamp (stamp),
+  KEY chat_who (who),
+  FULLTEXT KEY chat_utterance (utterance)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+*/
