@@ -2,3 +2,20 @@
 Loosely based on protobot: http://github.com/gf3/protobot
 
 
+
+Install:
+
+Latest NodeJS: 0.2.0
+Latest NPM
+
+npm install mysql
+
+Clone this repo:
+    git submodule init
+    git submodule update
+
+    cd lib
+    cp config.js.sample config.js
+    vim config.js //Update settings
+
+    ./yuibot.js
