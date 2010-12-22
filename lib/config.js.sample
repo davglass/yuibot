@@ -7,7 +7,11 @@ exports.config = {
     mysql: {
         username: 'username',
         password: 'password',
-        db: 'dbname'
+        db: 'dbname',
+        config: function(mysql) {
+            mysql.query('set @@session.wait_timeout=28800');
+            mysql.query('set @@session.interactive_timeout=28800');
+        }
     },
     irc: {
         server: 'irc.freenode.net',
